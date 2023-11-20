@@ -26,3 +26,26 @@ To use the InputMasker class, follow these steps:
        maskLength,
        notAllowedCallbackFunction
    );
+   ```
+
+3. Customize the parameters according to your specific requirements.
+4. The InputMasker will automatically apply the mask to the specified input field and handle events such as paste and keydown to ensure the input adheres to the defined rules.
+
+## Example
+
+```javascript
+// Instantiate InputMasker for a numeric input field with a length of 4 and '*' as the mask character
+const inputMask = new InputMasker(
+    'numericInput',
+    /[0-9]/,
+    '*',
+    4,
+    (input) => {
+        console.log(`Input not allowed: ${input}`);
+    }
+);
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
